@@ -15,16 +15,19 @@ async def make_request_BTC():
         response = await fetch(session, "https://test.deribit.com/api/v2/public/get_index?currency=BTC")
         BTC_course = json.loads(response)       
         db = test.connect_db()
-        btc = test.CryptoCourse(currency=response['result'], course=response['BTC'], time=datetime.utcnow())
+        btc = test.CryptoCourse(currency='BTC', course=BTC_course["result"]["BTC"], time=datetime.utcnow())
+        
         db.add(btc)
         db.commit()
-        print(BTC_course)
+        
 async def make_request_ETH():
     async with aiohttp.ClientSession() as session:
         response = await fetch(session, "https://test.deribit.com/api/v2/public/get_index?currency=ETH")
-        UTH_course = json.loads(response)
-        
-        print(UTH_course)
+        ETH_course = json.loads(response)
+        db = test.connect_db()
+        eth = test.CryptoCourse(currency='ETH', course=ETH_course["result"]["ETH"], time=datetime.utcnow())
+        db.add(eth)
+        db.commit()
    
 async def run():    
     while True:

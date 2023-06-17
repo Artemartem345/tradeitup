@@ -9,7 +9,7 @@ metadata = MetaData()
 
 engine = create_engine('postgresql://localhost/crypto?user=artem&password=1234')
 def connect_db():
-    engine = create_engine('postgresql://localhost/crypto?user=artem&password=1234')
+    # engine = create_engine('postgresql://localhost/crypto?user=artem&password=1234')
     session = scoped_session(sessionmaker(bind=engine))
     return session
 
@@ -27,7 +27,7 @@ class CryptoCourse(Base):
     time = Column(DateTime)
 
 # db = connect_db()
-# btc = CryptoCourse(id=1, currency='BTC', course='26500.0', time=datetime.utcnow())
+# btc = CryptoCourse(currency='BTC', course='26500.0', time=datetime.utcnow())
 # db.add(btc)
 # db.commit()
 
