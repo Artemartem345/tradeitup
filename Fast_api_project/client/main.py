@@ -1,12 +1,14 @@
 '''
 python3 -m client.main
 '''
-
+from dotenv import load_dotenv
+import os
 import asyncio 
 import aiohttp
 import json
 import project.models as test 
 from datetime import datetime
+from scripts.config import REFRESH_TIME
 async def fetch(session, url):
     async with session.get(url) as response:        
         return await response.text()
@@ -33,12 +35,12 @@ async def run():
     while True:
         await make_request_BTC()
         await make_request_ETH()        
-        await asyncio.sleep(60)
+        await asyncio.sleep(REFRESH_TIME)
         
         
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()    
     loop.run_until_complete(run())
-    
+
     

@@ -1,4 +1,5 @@
 
+REFRESH_TIME = 30
 DATABASE_URL = 'postgresql://localhost/crypto?user=artem&password=1234'
 SECRET_CLIENT = 'yHxCmlexTG6wPR0aQHd4juIl19RCqYbpUbds7WRxr0E'
 ID_CLIENT = '33PVsFxa'
