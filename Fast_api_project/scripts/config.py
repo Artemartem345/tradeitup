@@ -1,6 +1,3 @@
-from starlette.config import Config
-
-config = Config()
 
 DATABASE_URL = 'postgresql://localhost/crypto?user=artem&password=1234'
 SECRET_CLIENT = 'yHxCmlexTG6wPR0aQHd4juIl19RCqYbpUbds7WRxr0E'

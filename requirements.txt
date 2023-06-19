@@ -1,8 +1,26 @@
-Python 3.10.6
-FastApi 0.95.0
-Asyncio, aiohttp - 3.4.3, 3.8.4 
-SqlAlchemy Database and Postgres - 2.0.16, 2.9.6
-docker compose - 1.29.2
-JSON - 3.2.0
-
-
+aiohttp==3.8.4
+aiosignal==1.3.1
+anyio==3.7.0
+async-timeout==4.0.2
+asyncio==3.4.3
+attrs==23.1.0
+certifi==2023.5.7
+charset-normalizer==3.1.0
+docker==6.1.3
+exceptiongroup==1.1.1
+fastapi==0.97.0
+frozenlist==1.3.3
+greenlet==2.0.2
+idna==3.4
+multidict==6.0.4
+packaging==23.1
+psycopg2-binary==2.9.6
+pydantic==1.10.9
+requests==2.31.0
+sniffio==1.3.0
+SQLAlchemy==2.0.16
+starlette==0.27.0
+typing_extensions==4.6.3
+urllib3==2.0.3
+websocket-client==1.6.0
+yarl==1.9.2
