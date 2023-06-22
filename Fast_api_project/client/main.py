@@ -1,8 +1,6 @@
 '''
 python3 -m client.main
 '''
-from dotenv import load_dotenv
-import os
 import asyncio 
 import aiohttp
 import json
