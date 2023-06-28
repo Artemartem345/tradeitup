@@ -12,6 +12,8 @@
 # Main
 
 - for using this project go to env file and enter your data
+- Docker compose-up
+- Client.main
 - Enjoy!
 
 
